@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة المهام اليومية</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #f3f6f4;
+      direction: rtl;
+      padding: 10px;
+      margin: 0;
+    }h1 {
+  text-align: center;
+  color: #2f3e46;
+  margin-bottom: 10px;
+}
+
+#date {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #4a4e69;
+}
+
+.section {
+  background: linear-gradient(to left, #d9f8c4, #cfe7f3);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #355070;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.task-name {
+  flex: 1;
+  font-size: 16px;
+  color: #2f3e46;
+}
+
+.time-log {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.done {
+  background-color: #6fcf97;
+  color: white;
+}
+
+.not-done {
+  background-color: #eb5757;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.progress-bar {
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress {
+  height: 100%;
+  background-color: #6fcf97;
+  text-align: center;
+  color: white;
+  line-height: 20px;
+}
+
+.message, .reward {
+  text-align: center;
+  font-size: 18px;
+  color: #4a4e69;
+  margin-top: 10px;
+}
+
+.reward-box {
+  text-align: center;
+  margin-top: 10px;
+  color: #6a4c93;
+}
+
+.punishment-box {
+  text-align: center;
+  margin-top: 10px;
+  color: #c0392b;
+}
+
+@media (max-width: 600px) {
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    margin-top: 5px;
+  }
+}
+
+  </style>
+</head>
+<body>  <h1>لوحة المهام اليومية</h1>
+  <div id="date"></div>  <div id="progressContainer" class="progress-bar">
+    <div id="progress" class="progress">0%</div>
+  </div>
+  <div id="message" class="message"></div>
+  <div id="rewardBox" class="reward-box"></div>
+  <div id="punishmentBox" class="punishment-box"></div>  <div class="section">
+    <h2>القسم الديني</h2>
+    <div class="task"><span class="task-name">صلاة الصبح</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">أذكار الصباح</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">صلاة الظهر</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">قراءة القرآن</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">صلاة المغرب</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">أذكار المساء</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+  </div>  <div class="section">
+    <h2>القسم الحياتي</h2>
+    <div class="task"><span class="task-name">الأكل الصحي</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">ممارسة الرياضة</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">شرب الماء</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div><div class="task"><span class="task-name">الاستيقاظ والنوم الصحي</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">الاعتناء بالشعر والجسم</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+  </div>  <div class="section">
+    <h2>قسم التطوير</h2>
+    <div class="task"><span class="task-name">تطوير القراءة</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">تطوير الكتابة</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">تطوير الصحة النفسية</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+    <div class="task"><span class="task-name">تطوير العقل</span><div class="buttons"><button class="done">تم</button><button class="not-done">لم يتم</button></div></div>
+  </div>  <script>
+    const tasks = document.querySelectorAll('.task');
+    const progressEl = document.getElementById('progress');
+    const messageEl = document.getElementById('message');
+    const rewardBox = document.getElementById('rewardBox');
+    const punishmentBox = document.getElementById('punishmentBox');
+    const dateEl = document.getElementById('date');
+
+    const rewards = ["استراحة 5 دقائق!", "قطعة شوكولاتة!", "كلمات تحفيزية!", "شاهد فيديو ممتع!", "تنزه قصير!"];
+    const punishments = ["دقيقتان تأمل وتأنيب ذاتي", "قلل من وقت الهاتف", "قم بترتيب غرفتك", "تدوين سبب عدم الإنجاز", "قراءة صفحة تطوير ذات"];
+
+    function getRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function updateProgress() {
+      const total = tasks.length;
+      let completed = 0;
+      tasks.forEach(task => {
+        const name = task.querySelector('.task-name');
+        if (name.classList.contains('completed')) completed++;
+      });
+      const percent = Math.round((completed / total) * 100);
+      progressEl.style.width = percent + '%';
+      progressEl.textContent = percent + '%';
+
+      if (percent === 100) {
+        messageEl.textContent = 'أحسنت! لقد أنجزت جميع مهامك اليوم!';
+      } else if (percent >= 70) {
+        messageEl.textContent = 'عمل ممتاز، استمر!';
+      } else if (percent >= 40) {
+        messageEl.textContent = 'أنت على الطريق الصحيح!';
+      } else {
+        messageEl.textContent = '';
+      }
+    }
+
+    function getCurrentTime() {
+      const now = new Date();
+      return now.toLocaleTimeString();
+    }
+
+    function displayDate() {
+      const now = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+      dateEl.textContent = 'التاريخ: ' + now.toLocaleDateString('ar-EG', options);
+    }
+
+    document.querySelectorAll('.task').forEach(task => {
+      const doneBtn = task.querySelector('.done');
+      const notDoneBtn = task.querySelector('.not-done');
+      const taskName = task.querySelector('.task-name');
+
+      let timeLog = document.createElement('div');
+      timeLog.className = 'time-log';
+      task.appendChild(timeLog);
+
+      doneBtn.addEventListener('click', () => {
+        taskName.classList.add('completed');
+        taskName.style.color = '#6fcf97';
+        timeLog.textContent = 'تم الإنجاز في: ' + getCurrentTime();
+        rewardBox.innerHTML = 'هدية: ' + getRandom(rewards);
+        punishmentBox.innerHTML = '';
+        updateProgress();
+      });
+
+      notDoneBtn.addEventListener('click', () => {
+        taskName.classList.remove('completed');
+        taskName.style.color = '#eb5757';
+        timeLog.textContent = 'لم يُنجز - الوقت: ' + getCurrentTime();
+        punishmentBox.innerHTML = 'عقاب: ' + getRandom(punishments);
+        rewardBox.innerHTML = '';
+        updateProgress();
+      });
+    });
+
+    displayDate();
+    updateProgress();
+  </script></body>
+</html>
